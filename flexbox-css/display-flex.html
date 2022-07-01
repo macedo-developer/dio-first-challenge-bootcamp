@@ -4,74 +4,109 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flex Wrap</title>
+    <title>Flex Flow</title>
 
     <style>
       .flex-container {
         display: flex;
-        height: 150px;
-        flex-direction: column;
-        border: 2px solid #ccc;
-        max-width: 300px;
+        border: 1px solid #ccc;
+        max-width: 500px;
+        margin-bottom: 10px;
       }
 
-      .item {
-        font-size: 24px;
-        height: 50%;
-        text-align: center;
-        width: 100px;
-        line-height: 50px;
-        min-width: 100px;
-      }
-
-      .nowrap {
-        flex-wrap: nowrap;
+      .default {
+        flex-flow: row nowrap;
       }
 
       .wrap {
-        flex-wrap: wrap;
+        flex-flow: row wrap;
       }
 
       .wrap-reverse {
-        flex-wrap: wrap-reverse;
+        flex-flow: row wrap-reverse;
       }
 
-      .blue {
-        background-color: blue;
+      .r-nowrap {
+        flex-flow: row-reverse nowrap;
       }
 
-      .green {
-        background-color: lightgreen;
+      .r-wrap {
+        flex-flow: row-reverse wrap;
       }
 
-      .violet {
-        background-color: violet;
+      .r-wrap-reverse {
+        flex-flow: row-reverse wrap-reverse;
+      }
+
+      .item {
+        background-color: coral;
+        margin: 5px;
+        color: white;
+        text-align: center;
+        width: 100px;
+        height: 50%;
+        line-height: 50px;
       }
     </style>
   </head>
   <body>
-    <h2>No Wrap</h2>
-    <div class="flex-container nowrap">
-      <div class="item violet">A</div>
-      <div class="item green">B</div>
-      <div class="item blue">C</div>
-      <div class="item violet">D</div>
+    <h1>Default row nowrap</h1>
+    <div class="flex-container default">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
     </div>
 
-    <h2>Wrap</h2>
+    <h1>Wrap</h1>
     <div class="flex-container wrap">
-      <div class="item violet">E</div>
-      <div class="item green">F</div>
-      <div class="item blue">G</div>
-      <div class="item violet">H</div>
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
     </div>
-    
-    <h2>Wrap Reverse</h2>
+
+    <h1>Wrap Reverse</h1>
     <div class="flex-container wrap-reverse">
-      <div class="item violet">I</div>
-      <div class="item blue">J</div>
-      <div class="item green">K</div>
-      <div class="item violet">L</div>
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+
+    <h1>Row-reverse nowrap</h1>
+    <div class="flex-container r-nowrap">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+
+    <h1>Row-reverse wrap</h1>
+    <div class="flex-container r-wrap">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+
+    <h1>Row-reverse wrap-reverse</h1>
+    <div class="flex-container r-wrap-reverse">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
     </div>
   </body>
 </html>
