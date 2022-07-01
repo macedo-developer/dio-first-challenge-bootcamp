@@ -4,89 +4,74 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flex direction</title>
+    <title>Flex Wrap</title>
 
     <style>
       .flex-container {
-        margin: 0;
-        padding: 0;
         display: flex;
-        list-style: none;
-      }
-
-      .flex-item {
-        background-color: brown;
-        height: 50px;
-        width: 50px;
-        line-height: 50px;
-        font-size: 20px;
-        color: white;
-        text-align: center;
-        margin: 5px;
-      }
-
-      .row {
-        flex-direction: row;
-      }
-
-      .row-reverse {
-        flex-direction: row-reverse;
-      }
-
-      .row-reverse li {
-        background-color: chartreuse;
-      }
-
-      .column {
-        float: left;
+        height: 150px;
         flex-direction: column;
+        border: 2px solid #ccc;
+        max-width: 300px;
       }
 
-      .column li {
-        background-color: cornflowerblue;
+      .item {
+        font-size: 24px;
+        height: 50%;
+        text-align: center;
+        width: 100px;
+        line-height: 50px;
+        min-width: 100px;
       }
 
-      .column-reverse {
-        float: right;
-        flex-direction: column-reverse;
+      .nowrap {
+        flex-wrap: nowrap;
       }
 
-      .column-reverse li {
-        background-color: darkblue;
+      .wrap {
+        flex-wrap: wrap;
+      }
+
+      .wrap-reverse {
+        flex-wrap: wrap-reverse;
+      }
+
+      .blue {
+        background-color: blue;
+      }
+
+      .green {
+        background-color: lightgreen;
+      }
+
+      .violet {
+        background-color: violet;
       }
     </style>
   </head>
   <body>
-    <ul class="flex-container row">
-      <li class="flex-item">1</li>
-      <li class="flex-item">2</li>
-      <li class="flex-item">3</li>
-      <li class="flex-item">4</li>
-      <li class="flex-item">5</li>
-    </ul>
+    <h2>No Wrap</h2>
+    <div class="flex-container nowrap">
+      <div class="item violet">A</div>
+      <div class="item green">B</div>
+      <div class="item blue">C</div>
+      <div class="item violet">D</div>
+    </div>
 
-    <ul class="flex-container row-reverse">
-      <li class="flex-item">1</li>
-      <li class="flex-item">2</li>
-      <li class="flex-item">3</li>
-      <li class="flex-item">4</li>
-      <li class="flex-item">5</li>
-    </ul>
-
-    <ul class="flex-container column">
-      <li class="flex-item">1</li>
-      <li class="flex-item">2</li>
-      <li class="flex-item">3</li>
-      <li class="flex-item">4</li>
-      <li class="flex-item">5</li>
-    </ul>
-
-    <ul class="flex-container column-reverse">
-      <li class="flex-item">1</li>
-      <li class="flex-item">2</li>
-      <li class="flex-item">3</li>
-      <li class="flex-item">4</li>
-      <li class="flex-item">5</li>
-    </ul>
+    <h2>Wrap</h2>
+    <div class="flex-container wrap">
+      <div class="item violet">E</div>
+      <div class="item green">F</div>
+      <div class="item blue">G</div>
+      <div class="item violet">H</div>
+    </div>
+    
+    <h2>Wrap Reverse</h2>
+    <div class="flex-container wrap-reverse">
+      <div class="item violet">I</div>
+      <div class="item blue">J</div>
+      <div class="item green">K</div>
+      <div class="item violet">L</div>
+    </div>
   </body>
 </html>
