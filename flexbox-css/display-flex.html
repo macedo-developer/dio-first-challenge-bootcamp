@@ -4,25 +4,28 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flex - Grow</title>
+    <title>Flex - Basics</title>
 
     <style>
-      .flex-container {
-        display: flex;
-        border: 1px solid black;
+      .container {
         max-width: 300px;
+        border: 1px solid black;
+        display: flex;
       }
 
       .item {
-        background-color: pink;
-        margin: 5px;
-        padding: 10px;
-        text-align: center;
+        background-color: aqua;
         color: white;
+        text-align: center;
+        margin: 5px;
       }
 
-      .fg-0 {
-        flex-grow: 0;
+      .b-auto {
+        flex-basis: auto;
+      }
+
+      .b-auto {
+        flex-basis: 0;
       }
 
       .fg-1 {
@@ -33,35 +36,35 @@
         flex-grow: 2;
       }
 
-      .fg-3 {
-        flex-grow: 3;
+      .w100 {
+        flex-basis: 100px;
       }
     </style>
   </head>
 
   <body>
-    <p>Flex Grow 0</p>
-    <div class="flex-container">
-      <div class="item fg-0">A</div>
-      <div class="item fg-0">B</div>
-      <div class="item fg-0">C</div>
-      <div class="item fg-0">D</div>
+    <p>basis auto</p>
+    <div class="container">
+      <div class="item b-auto fg-1">1</div>
+      <div class="item b-auto fg-1">2</div>
+      <div class="item b-auto fg-1">3</div>
+      <div class="item b-auto fg-2">4</div>
     </div>
 
-    <p>Flex Grow 1</p>
-    <div class="flex-container">
-      <div class="item fg-1">A</div>
-      <div class="item fg-1">B</div>
-      <div class="item fg-1">C</div>
-      <div class="item fg-1">D</div>
+    <p>basis 0</p>
+    <div class="container">
+      <div class="item b-0 fg-1">1</div>
+      <div class="item b-0 fg-1">2</div>
+      <div class="item b-0 fg-1">3</div>
+      <div class="item b-0 fg-1">4</div>
     </div>
 
-    <p>Flex Grow Variado</p>
-    <div class="flex-container">
-      <div class="item fg-0">A</div>
-      <div class="item fg-3">B</div>
-      <div class="item fg-1">C</div>
-      <div class="item fg-2">D</div>
+    <p>basis + width</p>
+    <div class="container">
+      <div class="item w100">1</div>
+      <div class="item w100">2</div>
+      <div class="item w100">3</div>
+      <div class="item w100">4</div>
     </div>
   </body>
 </html>
