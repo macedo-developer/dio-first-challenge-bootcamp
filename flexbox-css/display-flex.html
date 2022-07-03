@@ -4,67 +4,82 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flex - Basics</title>
+    <title>Flex - shrink</title>
 
     <style>
       .container {
-        max-width: 300px;
-        border: 1px solid black;
+        max-width: 350px;
+        border: 1px solid rgb(70, 70, 70);
         display: flex;
+        margin: 2px;
       }
 
       .item {
-        background-color: aqua;
+        background-color: rgb(12, 10, 131);
         color: white;
         text-align: center;
         margin: 5px;
+        font-size: 24px;
       }
 
-      .b-auto {
-        flex-basis: auto;
+      .s-0 {
+        flex-shrink: 0;
       }
 
-      .b-auto {
-        flex-basis: 0;
+      .s-1 {
+        flex-shrink: 1;
       }
 
       .fg-1 {
         flex-grow: 1;
       }
 
-      .fg-2 {
-        flex-grow: 2;
-      }
-
-      .w100 {
+      .s-0 {
+        flex-shrink: 0;
         flex-basis: 100px;
       }
+
+      .s-2 {
+        flex-shrink: 2;
+        flex-basis: 100px;
+      }
+
+      .s-3 {
+        flex-shrink: 3;
+        flex-basis: 100px;
+      }
+
     </style>
   </head>
 
   <body>
-    <p>basis auto</p>
+    <p>flex shrink 1</p>
     <div class="container">
-      <div class="item b-auto fg-1">1</div>
-      <div class="item b-auto fg-1">2</div>
-      <div class="item b-auto fg-1">3</div>
-      <div class="item b-auto fg-2">4</div>
+      <div class="item s-1 fg-1">1</div>
+      <div class="item s-1 fg-1">2</div>
+      <div class="item s-1 fg-1">3</div>
+      <div class="item s-1 fg-1">4</div>
+    </div>
+    <div class="container">
+      <div class="item s-1 fg-1">1</div>
+      <div class="item s-1 fg-1">asdfasdf asdfa</div>
+      <div class="item s-1 fg-1">34444</div>
+      <div class="item s-1 fg-1">4</div>
+    </div>
+    <p>shrink 0 / basis 100px</p>
+    <div class="container">
+      <div class="item s-0 fg-1">1</div>
+      <div class="item s-0 fg-1">asdfasdf asdfa</div>
+      <div class="item s-0 fg-1">3 asdfa asdfa</div>
+      <div class="item s-0 fg-1">4</div>
     </div>
 
-    <p>basis 0</p>
+    <p>flex-shrink: mix/basis 100px</p>
     <div class="container">
-      <div class="item b-0 fg-1">1</div>
-      <div class="item b-0 fg-1">2</div>
-      <div class="item b-0 fg-1">3</div>
-      <div class="item b-0 fg-1">4</div>
-    </div>
-
-    <p>basis + width</p>
-    <div class="container">
-      <div class="item w100">1</div>
-      <div class="item w100">2</div>
-      <div class="item w100">3</div>
-      <div class="item w100">4</div>
+      <div class="item s-1 fg-1">1</div>
+      <div class="item s-2 fg-1">asdfasdf asdfa</div>
+      <div class="item s-2 fg-1">34444</div>
+      <div class="item s-3 fg-1">4</div>
     </div>
   </body>
 </html>
