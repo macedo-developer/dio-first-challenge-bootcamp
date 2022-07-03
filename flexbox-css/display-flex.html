@@ -4,81 +4,64 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flex - Align content</title>
+    <title>Flex - Grow</title>
 
     <style>
-      body {
-        background-color: rgb(21, 21, 21);
-        color: white;
-      }
-      .container {
-        height: 400px;
-        max-width: 300px;
+      .flex-container {
         display: flex;
-        flex-wrap: wrap;
-        border: 2px solid #ccc;
+        border: 1px solid black;
+        max-width: 300px;
       }
 
       .item {
-        background-color: rgb(14, 171, 19);
-        padding: 0 5px;
-        flex: 1;
-        color: white;
-        text-align: center;
+        background-color: pink;
         margin: 5px;
+        padding: 10px;
+        text-align: center;
+        color: white;
       }
 
-      .stretch {
-        align-content: stretch;
+      .fg-0 {
+        flex-grow: 0;
       }
-      
-      .center {
-        align-content: center;
+
+      .fg-1 {
+        flex-grow: 1;
+      }
+
+      .fg-2 {
+        flex-grow: 2;
+      }
+
+      .fg-3 {
+        flex-grow: 3;
       }
     </style>
   </head>
-  <p>stretch</p>
-  <div class="container strech">
-    <div class="item">
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry
-    </div>
-    <div class="item">
-      The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from
-      a line in section 1.10.32.
-    </div>
-    <div class="item">There are many variations of passages</div>
-    <div class="item">
-      It is a long established fact that a reader will be distracted by the
-      readable
-    </div>
-    <div class="item">into electronic typesetting</div>
-    <div class="item">
-      but also the leap into electronic typesetting, remaining essentially
-      unchanged
-    </div>
-    <div class="item">essentially unchanged</div>
-  </div>
 
-  <p>center</p>
-  <div class="container center">
-    <div class="item">
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry
+  <body>
+    <p>Flex Grow 0</p>
+    <div class="flex-container">
+      <div class="item fg-0">A</div>
+      <div class="item fg-0">B</div>
+      <div class="item fg-0">C</div>
+      <div class="item fg-0">D</div>
     </div>
-    <div class="item">
-      The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from
-      a line in section 1.10.32.
+
+    <p>Flex Grow 1</p>
+    <div class="flex-container">
+      <div class="item fg-1">A</div>
+      <div class="item fg-1">B</div>
+      <div class="item fg-1">C</div>
+      <div class="item fg-1">D</div>
     </div>
-    <div class="item">There are many variations of passages</div>
-    <div class="item">
-      It is a long established fact that a reader will be distracted by the
-      readable
+
+    <p>Flex Grow Variado</p>
+    <div class="flex-container">
+      <div class="item fg-0">A</div>
+      <div class="item fg-3">B</div>
+      <div class="item fg-1">C</div>
+      <div class="item fg-2">D</div>
     </div>
-    <div class="item">into electronic typesetting</div>
-    <div class="item">
-      but also the leap into electronic typesetting, remaining essentially
-      unchanged
-    </div>
-    <div class="item">essentially unchanged</div>
-  </div>
-  <body></body>
+  </body>
 </html>
