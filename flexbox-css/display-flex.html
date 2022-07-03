@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flex - Align items</title>
+    <title>Flex - Align content</title>
 
     <style>
       body {
@@ -12,93 +12,73 @@
         color: white;
       }
       .container {
-        max-width: 350px;
-        border: 1px solid #fff;
+        height: 400px;
+        max-width: 300px;
         display: flex;
+        flex-wrap: wrap;
+        border: 2px solid #ccc;
       }
 
       .item {
-        background-color: orange;
-        margin: 5px;
+        background-color: rgb(14, 171, 19);
+        padding: 0 5px;
+        flex: 1;
         color: white;
         text-align: center;
-        flex: 1;
-      }
-
-      .flex {
-        flex: 1;
-      }
-
-      .center {
-        align-items: center;
+        margin: 5px;
       }
 
       .stretch {
-        align-items: stretch;
+        align-content: stretch;
       }
-
-      .flex-start {
-        align-items: flex-start;
-      }
-
-      .flex-end {
-        align-items: flex-end;
-      }
-
-      .baseline {
-        align-items: baseline;
+      
+      .center {
+        align-content: center;
       }
     </style>
   </head>
-  <body>
-    <p>Align Center</p>
-    <section class="container center flex">
-      <div class="item">Lorem ipsum dolor sit</div>
-      <div class="item">amet consectetur adipisicing elit.</div>
-      <div class="item">
-        Quidem nulla quas fugit, eveniet qui voluptatem minima labore vel
-        tempora at adipisci!
-      </div>
-    </section>
+  <p>stretch</p>
+  <div class="container strech">
+    <div class="item">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry
+    </div>
+    <div class="item">
+      The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from
+      a line in section 1.10.32.
+    </div>
+    <div class="item">There are many variations of passages</div>
+    <div class="item">
+      It is a long established fact that a reader will be distracted by the
+      readable
+    </div>
+    <div class="item">into electronic typesetting</div>
+    <div class="item">
+      but also the leap into electronic typesetting, remaining essentially
+      unchanged
+    </div>
+    <div class="item">essentially unchanged</div>
+  </div>
 
-    <p>Align Sretch</p>
-    <section class="container stretch flex">
-      <div class="item">Lorem ipsum dolor sit</div>
-      <div class="item">amet consectetur adipisicing elit.</div>
-      <div class="item">
-        Quidem nulla quas fugit, eveniet qui voluptatem minima labore vel
-        tempora at adipisci!
-      </div>
-    </section>
-
-    <p>Align Start</p>
-    <section class="container flex-start flex">
-      <div class="item">Lorem ipsum dolor sit</div>
-      <div class="item">amet consectetur adipisicing elit.</div>
-      <div class="item">
-        Quidem nulla quas fugit, eveniet qui voluptatem minima labore vel
-        tempora at adipisci!
-      </div>
-    </section>
-
-    <p>Align End</p>
-    <section class="container flex-end flex">
-      <div class="item">Lorem ipsum dolor sit</div>
-      <div class="item">amet consectetur adipisicing elit.</div>
-      <div class="item">
-        Quidem nulla quas fugit, eveniet qui voluptatem minima labore vel
-        tempora at adipisci!
-      </div>
-    </section>
-
-    <p>Align BaseLine</p>
-    <section class="container baseline flex">
-      <div class="item">Lorem ipsum dolor sit</div>
-      <div class="item"><br>amet consectetur adipisicing elit.</div>
-      <div class="item">
-        Quidem nulla quas fugit, eveniet qui voluptatem minima labore vel
-        tempora at adipisci!
-      </div>
-    </section>
-  </body>
+  <p>center</p>
+  <div class="container center">
+    <div class="item">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry
+    </div>
+    <div class="item">
+      The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from
+      a line in section 1.10.32.
+    </div>
+    <div class="item">There are many variations of passages</div>
+    <div class="item">
+      It is a long established fact that a reader will be distracted by the
+      readable
+    </div>
+    <div class="item">into electronic typesetting</div>
+    <div class="item">
+      but also the leap into electronic typesetting, remaining essentially
+      unchanged
+    </div>
+    <div class="item">essentially unchanged</div>
+  </div>
+  <body></body>
 </html>
