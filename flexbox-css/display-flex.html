@@ -15,49 +15,58 @@
       }
 
       .item {
-        background-color: rgb(15, 14, 61);
+        background-color: rgba(194, 46, 162, 0.774);
         color: white;
         text-align: center;
         margin: 5px;
         font-size: 24px;
-        flex: 1;
       }
 
-      .o1 {
-        order: 1;
+      .align-center{
+        align-items: center;
       }
 
-      .o2 {
-        order: 2;
+      .center {
+        align-self: center;
       }
 
-      .o3 {
-        order: 3;
+      .start {
+        align-self: flex-start;
       }
 
-      .o4 {
-        order: 4;
+      .end {
+        align-self: flex-end;
       }
 
+      .baseline {
+        align-self: baseline;
+      }
 
+      .stretch {
+        align-items: stretch;
+      }
+
+      .auto {
+        align-self: auto;
+      }
     </style>
   </head>
 
   <body>
-    <p>Order: 0</p>
-    <div class="container">
-      <div class="item">1</div>
-      <div class="item">2</div>
-      <div class="item">3</div>
-      <div class="item">4</div>
+    <p>Align Self: auto</p>
+    <div class="container align-center">
+      <div class="item auto">1asd asdfa d</div>
+      <div class="item auto">2 adf fds ase</div>
+      <div class="item auto">3 asd awe csc</div>
+      <div class="item auto">4 ast ecb vcxsaefwefsdf sdf ser fdfd</div>
     </div>
 
-    <p>Order: diferentes</p>
+    <p>Align Self: diferentes</p>
     <div class="container">
-      <div class="item o3">1</div>
-      <div class="item o1">2</div>
-      <div class="item o4">3</div>
-      <div class="item o2">4</div>
+      <div class="item auto">1rtew asdf asd asdf asfds</div>
+      <div class="item start">2sdf sdfswe</div>
+      <div class="item stretch">3 sdfs sf fdsd sdf</div>
+      <div class="item end">4sdf sdfsdfwe werwe fwef</div>
     </div>
   </body>
 </html>
