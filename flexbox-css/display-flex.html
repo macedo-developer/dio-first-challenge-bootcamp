@@ -20,47 +20,44 @@
         text-align: center;
         margin: 5px;
         font-size: 24px;
+        flex: 1;
       }
 
-      .flex-1 {
-        flex: 1; /* grow=1, shrink= 1, basis=0 */
+      .o1 {
+        order: 1;
       }
 
-      .flex-2 {
-        flex: 2; /* grow=1, shrink=2, basis=0*/
+      .o2 {
+        order: 2;
       }
 
-      .largura {
-        width: 200px;
-        min-width: 250px;
+      .o3 {
+        order: 3;
       }
+
+      .o4 {
+        order: 4;
+      }
+
 
     </style>
   </head>
 
   <body>
-    <p>Flex: 1</p>
+    <p>Order: 0</p>
     <div class="container">
-      <div class="item flex-1">1</div>
-      <div class="item flex-1">2</div>
-      <div class="item flex-1">3</div>
-      <div class="item flex-1">4</div>
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
     </div>
 
-    <p>Flex: mix</p>
+    <p>Order: diferentes</p>
     <div class="container">
-      <div class="item flex-1">1</div>
-      <div class="item flex-2">2</div>
-      <div class="item flex-1">3</div>
-      <div class="item flex-2">4</div>
-    </div>
-
-    <p>Flex: ignore width</p>
-    <div class="container">
-      <div class="item flex-1 largura">1</div>
-      <div class="item flex-1 largura">2</div>
-      <div class="item flex-1 largura">3</div>
-      <div class="item flex-1 largura">4</div>
+      <div class="item o3">1</div>
+      <div class="item o1">2</div>
+      <div class="item o4">3</div>
+      <div class="item o2">4</div>
     </div>
   </body>
 </html>
